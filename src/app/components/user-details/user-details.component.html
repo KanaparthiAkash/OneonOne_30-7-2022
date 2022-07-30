@@ -1,0 +1,37 @@
+<!-- {{ user | json }} -->
+
+<div *ngIf="user">
+  <h2>Name : {{ user.name }}</h2>
+  <h2>User Name : {{ user.username }}</h2>
+  <h2>Email : {{ user.email }}</h2>
+  <h2>Address :</h2>
+  <h3>Street : {{ user.address.street }}</h3>
+  <h3>City : {{ user.address.city }}</h3>
+  <h3>zipcode : {{ user.address.zipcode }}</h3>
+  <h2>Phone : {{ user.phone }}</h2>
+  <h2>Website : {{ user.website }}</h2>
+  <h2>Company : {{ user.company.name }}</h2>
+  <button [routerLink]="['/post', user.id]" routerLinkActive="true">
+    Show posts
+  </button>
+  <!-- <button [routerLink]="['/posts']" [queryParams]="{ userId: 'user.id' }">
+    Get Posts
+  </button> -->
+
+  <!-- <button (click)="getposts(user.id)">Get Posts</button> -->
+</div>
+
+<!-- id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: Address;
+  phone: string;
+  website: string;
+  company: Company; -->
+<!-- 
+  street:string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: Geo -->

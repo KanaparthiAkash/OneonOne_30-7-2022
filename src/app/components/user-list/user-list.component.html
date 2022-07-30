@@ -1,0 +1,21 @@
+<div>
+  <table>
+    <tr>
+      <td>NAME</td>
+      <td>WEBSITE</td>
+      <td>EMAIL</td>
+      <td>MORE DETAILS</td>
+    </tr>
+    <tr *ngFor="let user of userList">
+      <td>{{ user.name }}</td>
+      <td>
+        <a href="user.website">{{ user.website }}</a>
+      </td>
+      <td>{{ user.email }}</td>
+      <td>
+        <button (click)="getUser(user)">view Details</button>
+      </td>
+    </tr>
+  </table>
+  <app-user-details [user]="user"></app-user-details>
+</div>
